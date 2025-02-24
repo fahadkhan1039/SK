@@ -13,7 +13,7 @@ Version: 1.0
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;display=swap");
 
 :root {
-	--primary-color: #3871C1;
+	--primary-color: #669fef;
 	--secondary-color: #51ADE5;
 	--text-color: #81848A;
 	--accent-color: #0a68c0;
@@ -527,7 +527,7 @@ hr {
 }
 
 .section-title h2 {
-  font-size: 75px;
+  font-size: 60px;
   font-weight: 500;
   line-height: 80px;
   letter-spacing: -1px;
@@ -3353,10 +3353,15 @@ h1.pl-150 {
   position: relative;
 }
 
+.services-tabs{
+  display: flex;
+  justify-content: center;
+}
+
 .services-text {
   position: absolute;
   bottom: 35px;
-  left: -220px;
+  left: -200px;
   max-width: 410px;
   background: #f1f1f1;
   padding: 50px;
@@ -4224,9 +4229,9 @@ figcaption {
   margin-top: 5px;
 }
 
-.single-testimonial-item img {
+/* .single-testimonial-item img {
   width: inherit !important;
-}
+} */
 
 .testimonial-author {
   margin-top: 30px;
@@ -6345,4 +6350,10 @@ h5.slick-slide img {
 .show {
   opacity: 1;
   transform: scale(1) rotateX(0deg);
+}
+
+/* team image */
+
+.wid{
+  width: 89% !important;
 }
