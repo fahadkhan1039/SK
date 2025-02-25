@@ -150,10 +150,19 @@ hr {
 .section-padding {
   padding: 150px 0;
 }
+.wid{
+  width: 89% !important;
+}
 
+.mt{
+  margin-top: 40px;
+}
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .section-padding {
     padding: 100px 10px;
+  }
+  .mt{
+    margin-top: 10px;
   }
 }
 
@@ -161,12 +170,22 @@ hr {
   .section-padding {
     padding: 100px 30px;
   }
+  .mt{
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 767px) {
   .section-padding {
     padding: 100px 10px;
   }
+  .wid{
+    width: 100% !important;
+  }
+  .mt{
+    margin-top: 0px;
+  }
+  
 }
 
 /*Margin & Padding */
@@ -6354,6 +6373,3 @@ h5.slick-slide img {
 
 /* team image */
 
-.wid{
-  width: 89% !important;
-}
