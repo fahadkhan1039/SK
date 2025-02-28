@@ -1705,7 +1705,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .main-menu ul li.active a {
-  color: #171717;
+  color: var(--accent-color);
 }
 
 .main-menu ul li.active:before {
@@ -1715,7 +1715,7 @@ input[type=search]::-webkit-search-results-decoration {
   left: 0;
   width: 100%;
   height: 1px;
-  background: #171717;
+  background: var(--accent-color);;
 }
 
 .mobile-nav {
@@ -1985,7 +1985,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 }
 
 #home-1 .hero-area-banner {
-  background-image: url(../img/slider/slide-1.jpg);
+  background-image: url(../img/img/about.jpg);
   background-size: cover;
   background-position: top;
   background-color: #ddd;
@@ -1997,6 +1997,19 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   z-index: 1;
 }
 
+/* Black Overlay */
+#home-1 .hero-area-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Black color with 50% opacity */
+  z-index: -1;
+}
+
+/* Media Queries */
 @media (max-width: 767px) {
   #home-1 .hero-area-banner {
     background-position: top;
@@ -2006,8 +2019,11 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 #home-1 .hero-area-banner .hero-area-content {
   display: table-cell;
   vertical-align: middle;
+  position: relative;
+  z-index: 2; /* Content ke upar dikhane ke liye */
 }
 
+/* Heading Style */
 #home-1 .hero-area-banner h1 {
   font-size: 90px;
   font-weight: 500;
@@ -2015,6 +2031,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   padding-left: 70px;
 }
 
+/* Responsive Headings */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #home-1 .hero-area-banner h1 {
     font-size: 75px;
@@ -2038,31 +2055,15 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   }
 }
 
+/* Paragraph Style */
 #home-1 .hero-area-banner p {
   font-size: 18px;
   line-height: 28px;
   margin-top: 30px;
-  color: #777;
+  color: #ddd; /* Light gray for better visibility */
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  #home-1 .hero-area-banner p {
-    color: #333;
-    margin-top: 50px;
-  }
-}
-
-@media (max-width: 767px) {
-  #home-1 .hero-area-banner p {
-    color: #333;
-    margin-top: 50px;
-  }
-}
-
-#home-1 .service-info h4 {
-  color: #333;
-}
-
+/* Button Styles */
 #home-1 .theme-btn,
 #home-1 .white-btn {
   background: #171717;
@@ -2075,6 +2076,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
   border-color: #fff;
   color: #171717;
 }
+
 
 .hero-area {
   position: relative;
@@ -3282,7 +3284,7 @@ h1.pl-150 {
 }
 
 #service_page h1.third_line {
-  padding-left: 85px;
+  padding-left: 160px;
 }
 
 @media (max-width: 767px) {
@@ -5801,7 +5803,7 @@ a.reply-btn i {
 }
 
 .footer-area ul li a:hover {
-  opacity: 0.5;
+  color: white;
 }
 
 .footer-up {
