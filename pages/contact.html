@@ -22,7 +22,7 @@
     <title>Saeed Khamas</title>
     <!--Favicon-->
 
-    <link rel="icon" type="image/png" href="../assets/img/img/favicon.png">
+    <link rel="icon" type="image/png" href="../assets/img/img/favicon3.png">
 
 
     <!-- Bootstrap CSS -->
@@ -202,7 +202,7 @@
                                     <input type="tel" id="phone" placeholder="Phone Number"> <!-- ✅ ID added -->
                                     <textarea id="message" cols="30" rows="10" placeholder="Your Message"
                                         required></textarea>
-                                    <button type="button" onclick="sendMail()">Submit</button>
+                                    <input type="button" onclick="sendMail()" value="Submit">
                                 </form>
                             </div>
                         </div>
@@ -343,11 +343,12 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         (function () {
-            emailjs.init("2zsF6kdFYvPIF9nnA"); 
+            emailjs.init("vA-CLpsJauad2W7uo"); 
         })();
-
+    
         function sendMail() {
             var params = {
                 from_name: document.getElementById("name").value, 
@@ -355,16 +356,33 @@
                 phone: document.getElementById("phone").value, 
                 message: document.getElementById("message").value 
             };
-
-            emailjs.send("service_nva5o4b", "template_ce8xmbk", params)
+    
+            emailjs.send("service_vbxlps6", "template_fivgsoi", params)
                 .then(function (response) {
-                    alert("✅ Email Sent Successfully!");
+                    Swal.fire({
+                        toast: true,
+                        position: 'top-end', 
+                        icon: 'success',
+                        title: 'Email Sent Successfully!',
+                        showConfirmButton: false, 
+                        timer: 3000  
+                    });
+    
                     document.getElementById("contactForm").reset(); 
                 }, function (error) {
-                    alert("❌ Error Sending Email: " + JSON.stringify(error));
+                    Swal.fire({
+                        toast: true,
+                        position: 'top-end', 
+                        icon: 'error',
+                        title: 'Error Sending Email!',
+                        text: JSON.stringify(error),
+                        showConfirmButton: false, 
+                        timer: 3000  
+                    });
                 });
         }
     </script>
+    
 
     <script>
         // Function to highlight the active menu item on scroll

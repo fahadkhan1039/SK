@@ -6187,10 +6187,16 @@ a.reply-btn i {
   height: 60px;
 }
 
-.contact-section input[type=submit] {
+.contact-section input[type=button] {
   border: 1px solid #ddd;
   border-radius: 50px;
   width: 135px;
+}
+.contact-section input[type=button]:hover {
+  background-color: var(--accent-color);
+  width: 135px;
+  color: #ddd;
+  font-weight: bold;
 }
 
 .contact-section iframe {
